@@ -2,12 +2,14 @@ const express = require("express");
 const PORT = 4000;
 const app = express();
 const productRouter = require("./routers/products");
+const userRouter = require("./routers/auth");
 const cors = require("cors");
 
 app.use(express.json());
 app.use(cors());
 
 app.use("/products", productRouter);
+app.use("/account", userRouter);
 
 app.listen(PORT, console.log(`listening on ${PORT}`));
 
