@@ -2,7 +2,6 @@ const express = require("express");
 const { Router } = express;
 const Product = require("../models").product;
 const Categorie = require("../models").categorie;
-
 const router = new Router();
 
 router.get("/", async (req, res, next) => {
